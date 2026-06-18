@@ -1,15 +1,206 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
 <title>Parent Teacher System</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <link rel="stylesheet" href="css/style.css">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:linear-gradient(135deg,#1e3a8a,#2563eb);
+color:white;
+}
+
+/* NAVBAR */
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 50px;
+background:rgba(0,0,0,0.2);
+backdrop-filter:blur(10px);
+position:fixed;
+width:100%;
+top:0;
+}
+
+nav h2{
+margin:0;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+padding:8px 15px;
+border-radius:6px;
+transition:0.3s;
+}
+
+nav a:hover{
+background:white;
+color:#2563eb;
+}
+
+/* HERO */
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+flex-direction:column;
+padding:20px;
+}
+
+.hero h1{
+font-size:50px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:18px;
+max-width:600px;
+opacity:0.9;
+}
+
+.btn{
+margin-top:20px;
+padding:12px 25px;
+background:white;
+color:#2563eb;
+border:none;
+border-radius:8px;
+font-size:16px;
+cursor:pointer;
+text-decoration:none;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+}
+
+/* FEATURES */
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+padding:60px;
+background:white;
+color:black;
+}
+
+.card{
+background:#f4f6f9;
+padding:20px;
+border-radius:12px;
+text-align:center;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card i{
+font-size:30px;
+color:#2563eb;
+margin-bottom:10px;
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:20px;
+background:#111827;
+color:white;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+.hero h1{
+font-size:32px;
+}
+
+nav{
+flex-direction:column;
+}
+}
+</style>
+
 </head>
 
 <body>
 
+<!-- NAVBAR -->
+<nav>
+<h2>PT System</h2>
+
+<div>
+<a href="index.html">Home</a>
+<a href="login.html">Login</a>
+<a href="#features">Features</a>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+
 <h1>Parent Teacher Attendance System</h1>
 
-<a href="login.html">Login</a>
+<p>
+A modern system that connects teachers and parents to track student attendance in real-time.
+</p>
+
+<a href="login.html" class="btn">
+<i class="fa fa-right-to-bracket"></i> Get Started
+</a>
+
+</section>
+
+<!-- FEATURES -->
+<section class="features" id="features">
+
+<div class="card">
+<i class="fa fa-user-graduate"></i>
+<h3>Students Tracking</h3>
+<p>Monitor student attendance daily with accuracy.</p>
+</div>
+
+<div class="card">
+<i class="fa fa-chalkboard-teacher"></i>
+<h3>Teacher Portal</h3>
+<p>Teachers can easily mark attendance online.</p>
+</div>
+
+<div class="card">
+<i class="fa fa-user"></i>
+<h3>Parent Access</h3>
+<p>Parents view attendance anytime, anywhere.</p>
+</div>
+
+<div class="card">
+<i class="fa fa-chart-line"></i>
+<h3>Reports</h3>
+<p>Generate attendance reports and statistics.</p>
+</div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+<p>© 2026 Parent Teacher System | Built with ❤️ by Developer</p>
+</footer>
 
 </body>
 </html>
