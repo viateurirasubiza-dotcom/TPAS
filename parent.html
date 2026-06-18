@@ -1,0 +1,22 @@
+<h2>Child Attendance</h2>
+
+<div id="data"></div>
+
+<script type="module">
+import { db } from "./js/firebase.js";
+import { ref, onValue } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+
+const dataDiv = document.getElementById("data");
+
+onValue(ref(db, "attendance"), (snapshot) => {
+  dataDiv.innerHTML = "";
+
+  snapshot.forEach((item) => {
+    let val = item.val();
+
+    dataDiv.innerHTML += `
+      <p>${val.student} - ${val.status} - ${val.date}</p>
+    `;
+  });
+});
+</script>
