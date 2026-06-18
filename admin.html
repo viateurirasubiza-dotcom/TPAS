@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Admin Dashboard</title>
+<link rel="stylesheet" href="css/style.css">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body{
+margin:0;
+font-family:Arial;
+display:flex;
+background:#f4f6f9;
+}
+
+/* SIDEBAR */
+.sidebar{
+width:250px;
+height:100vh;
+background:#111827;
+color:white;
+padding:20px;
+position:fixed;
+}
+
+.sidebar h2{
+text-align:center;
+margin-bottom:30px;
+}
+
+.sidebar a{
+display:block;
+color:white;
+padding:12px;
+text-decoration:none;
+margin:5px 0;
+border-radius:8px;
+}
+
+.sidebar a:hover{
+background:#1f2937;
+}
+
+/* MAIN */
+.main{
+margin-left:250px;
+width:100%;
+padding:20px;
+}
+
+/* CARDS */
+.cards{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+text-align:center;
+}
+
+.card i{
+font-size:30px;
+margin-bottom:10px;
+color:#2563eb;
+}
+
+/* TABLE */
+table{
+width:100%;
+margin-top:20px;
+background:white;
+border-collapse:collapse;
+border-radius:10px;
+overflow:hidden;
+}
+
+th,td{
+padding:12px;
+border-bottom:1px solid #ddd;
+text-align:left;
+}
+
+th{
+background:#2563eb;
+color:white;
+}
+
+/* DARK MODE */
+.dark{
+background:#0f172a;
+color:white;
+}
+
+.dark .card,
+.dark table{
+background:#1e293b;
+color:white;
+}
+</style>
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+<h2>ADMIN</h2>
+
+<a href="#"><i class="fa fa-home"></i> Dashboard</a>
+<a href="#"><i class="fa fa-users"></i> Students</a>
+<a href="#"><i class="fa fa-user"></i> Teachers</a>
+<a href="#"><i class="fa fa-user-tie"></i> Parents</a>
+<a href="#"><i class="fa fa-clipboard"></i> Attendance</a>
+<a href="#"><i class="fa fa-chart-line"></i> Reports</a>
+<a href="#" onclick="toggleDark()"><i class="fa fa-moon"></i> Dark Mode</a>
+<a href="login.html"><i class="fa fa-sign-out"></i> Logout</a>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+<h1>Admin Dashboard</h1>
+
+<!-- CARDS -->
+<div class="cards">
+
+<div class="card">
+<i class="fa fa-users"></i>
+<h3>120</h3>
+<p>Students</p>
+</div>
+
+<div class="card">
+<i class="fa fa-user"></i>
+<h3>15</h3>
+<p>Teachers</p>
+</div>
+
+<div class="card">
+<i class="fa fa-user-tie"></i>
+<h3>110</h3>
+<p>Parents</p>
+</div>
+
+<div class="card">
+<i class="fa fa-clipboard"></i>
+<h3>Attendance</h3>
+<p>Today Records</p>
+</div>
+
+</div>
+
+<!-- TABLE -->
+<h2>Recent Attendance</h2>
+
+<table>
+<tr>
+<th>Student</th>
+<th>Status</th>
+<th>Date</th>
+</tr>
+
+<tr>
+<td>John Doe</td>
+<td>Present</td>
+<td>2026-06-18</td>
+</tr>
+
+<tr>
+<td>Mary Jane</td>
+<td>Absent</td>
+<td>2026-06-18</td>
+</tr>
+
+</table>
+
+</div>
+
+<script>
+function toggleDark(){
+document.body.classList.toggle("dark");
+}
+</script>
+
+</body>
+</html>
